@@ -1,0 +1,10 @@
+Question: 
+Show patient_id, diagnosis from admissions. Find patients admitted multiple times for the same diagnosis.
+
+
+Query:
+select  patient_id, diagnosis  
+from admissions a 
+
+group by patient_id, diagnosis
+having count(*)>1
